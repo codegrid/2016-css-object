@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>object-position</title>
+<style>
+body {
+  margin: 0;
+  font-size: 14px;
+}
+.demo {
+  box-sizing: border-box;
+  max-width: 634px;
+  padding: 5px;
+}
+.item{
+  margin-bottom: 15px;
+}
+.item h2 {
+  margin: 0;
+}
+.item h3 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #fff;
+}
+.item p {
+  margin: 10px 0;
+}
+.item .images {
+  margin: 0 -2px;
+  overflow: hidden;
+}
+.item .image {
+  position: relative;
+  float: left;
+  margin: 0 2px;
+}
+.item .image img{
+  background-color: pink;
+}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="item">
+    <h2>object-positionを指定する</h2>
+    <p>object-fitとobject-positionの組み合わせ例</p>
+    <div class="images">
+      <div class="image">
+        <h3>object-fit: contain;のみ指定</h3>
+        <img style="object-fit: contain;" src="../asset/img_01.jpg" alt=" " width="220" height="230">
+      </div>
+      <div class="image">
+        <h3>object-fit: contain;<br>object-position: 50px 50px;</h3>
+        <img style="object-fit: contain; object-position: 50px 50px;" src="../asset/img_01.jpg" alt=" " width="220" height="230">
+      </div>
+      <div class="image">
+        <h3>object-fit: cover;<br>object-position: 100% 100%;</h3>
+        <img style="object-fit: cover; object-position: 100% 100%;" src="../asset/img_01.jpg" alt=" " width="220" height="230">
+      </div>
+      <div class="image">
+        <h3>object-fit: none;<br>object-position: center right;</h3>
+        <img style="object-fit: none; object-position: center right;" src="../asset/img_01.jpg" alt=" " width="220" height="230">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

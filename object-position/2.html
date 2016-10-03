@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>object-position</title>
+<style>
+body {
+  margin: 0;
+  font-size: 14px;
+}
+.demo {
+  padding: 5px;
+}
+.visual {
+  width: 500px;
+  height: 500px;
+}
+.visual__image {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  object-position: 0% 0%;
+  animation: slide 50s normal infinite;
+}
+@keyframes slide {
+  0%   { object-position:   0%   0%; }
+  25%  { object-position: 100%   0%; }
+  50%  { object-position: 100% 100%; }
+  75%  { object-position:   0% 100%; }
+  100% { object-position:   0%   0%; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <h1>object-positionをアニメーションする</h1>
+  <div class="visual">
+    <img class="visual__image" src="../asset/img_02.jpg" alt=" ">
+  </div>
+</div>
+
+</body>
+</html>

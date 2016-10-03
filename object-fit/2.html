@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>object-fit</title>
+<style>
+body {
+  margin: 0;
+  font-size: 14px;
+}
+.demo {
+  box-sizing: border-box;
+  max-width: 634px;
+  padding: 5px;
+}
+.item{
+  margin-bottom: 15px;
+}
+.item h2 {
+  margin: 0;
+}
+.item h3 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #fff;
+}
+.item p {
+  margin: 10px 0;
+}
+.item p + p {
+  margin-top: -5px;
+}
+.item .images {
+  margin: 0 -2px;
+  overflow: hidden;
+}
+.item .image {
+  position: relative;
+  float: left;
+  margin: 0 2px;
+}
+.item .image img{
+  background-color: pink;
+}
+</style>
+</head>
+<body>
+
+<div class="demo">
+  <div class="item">
+    <h2>何も指定してない画像</h2>
+    <p>img要素にはwidth属性とheight属性を明記しない（画像自体は幅200px・高さ150pxのJPG）。<br>img要素の背景色はCSSでpinkを指定している。</p>
+    <div class="images">
+      <div class="image"><img src="../asset/img_01.jpg"></div>
+    </div>
+  </div>
+  <div class="item">
+    <h2>object-fit: scale-down;の扱い</h2>
+    <p>左は、画像自身がimg要素のサイズよりも大きい場合（contain扱い）。</p>
+    <p>右は、画像自身がimg要素のサイズよりも小さい場合（none扱い）。</p>
+    <div class="images">
+      <div class="image"><h3>img要素のサイズ<br>幅: 200px<br>高さ: 100px</h3><img style="object-fit: scale-down;" src="../asset/img_01.jpg" alt=" " width="200" height="100"></div>
+      <div class="image"><h3>img要素のサイズ<br>幅: 300px<br>高さ: 200px</h3><img style="object-fit: scale-down;" src="../asset/img_01.jpg" alt=" " width="300" height="200"></div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

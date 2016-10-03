@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>object-fit</title>
+<style>
+body {
+  margin: 0;
+  font-size: 14px;
+  padding: 10px;
+}
+.thumbList {
+  width: 570px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.thumbList__link {
+  display: block;
+  flex: 0 0 auto;
+  width: 180px;
+  height: 180px;
+  margin: 5px;
+}
+.thumbList__item {
+  box-sizing: border-box;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: 0.2s all linear;
+}
+.thumbList__link:hover .thumbList__item {
+  border-color: #2185da;
+  background-color: #ace2ee;
+}
+</style>
+</head>
+<body>
+
+<h1>縦横比が異なる6枚の画像のサムネイルリスト</h1>
+
+<div class="thumbList">
+  <a class="thumbList__link" href="../asset/img_03.jpg"><img class="thumbList__item" src="../asset/img_03.jpg" alt=" "></a>
+  <a class="thumbList__link" href="../asset/img_04.jpg"><img class="thumbList__item" src="../asset/img_04.jpg" alt=" "></a>
+  <a class="thumbList__link" href="../asset/img_05.jpg"><img class="thumbList__item" src="../asset/img_05.jpg" alt=" "></a>
+  <a class="thumbList__link" href="../asset/img_06.jpg"><img class="thumbList__item" src="../asset/img_06.jpg" alt=" "></a>
+  <a class="thumbList__link" href="../asset/img_07.jpg"><img class="thumbList__item" src="../asset/img_07.jpg" alt=" "></a>
+  <a class="thumbList__link" href="../asset/img_08.jpg"><img class="thumbList__item" src="../asset/img_08.jpg" alt=" "></a>
+</div>
+
+</body>
+</html>
