@@ -30,23 +30,14 @@ body {
 .with-caption:fullscreen {
   border-width: 0;
 }
-.with-caption::-webkit-media-text-track-display {
-  font-size: 18px;
-}
-.with-caption::-moz-media-text-track-display {
-  font-size: 18px;
-}
-.with-caption::-ms-media-text-track-display {
-  font-size: 18px;
-}
-.with-caption::media-text-track-display {
+.with-caption::cue {
   font-size: 18px;
 }
 </style>
 </head>
 <body>
 
-<video class="with-caption" autobuffer autoplay controls="controls">
+<video class="with-caption" autoplay controls muted>
   <source src="https://s3-ap-northeast-1.amazonaws.com/codegrid/webgl/demo/canvas/movie.webm" type="video/webm">
   <source src="https://s3-ap-northeast-1.amazonaws.com/codegrid/webgl/demo/canvas/movie.mp4" type="video/mp4">
   <track label="Japanese" kind="captions" srclang="ja" src="../asset/sample-movie-ja.vtt" type="text/vtt" default>
